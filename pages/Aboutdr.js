@@ -10,10 +10,7 @@ const Aboutdr = () => {
         <Header />
         <div className="about-header">
           <h1>About Doctor</h1>
-          <p>Dr. Umang Agarwal <br></br>
-          <p>Ex- Associate Professor<br></br>M.s.(Ortho),F.I.A.A.S, F.I.S.M.<br></br>
-              Arthroscopy & Arthroplasty Specialist
-            Joint Replacement and Spine Specialist</p></p>
+          <p>Dr. Zeba Quadiri </p>
               </div>
               <Aboutdoctor/>  
 

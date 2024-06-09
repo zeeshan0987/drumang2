@@ -51,16 +51,12 @@ const Aboutdoctor = () => {
               Arthroscopy & Arthroplasty Specialist
             Joint Replacement and Spine Specialist</p>
             <h6></h6>
-            Dr. Umang Agarwal is a highly skilled orthopedic surgeon with extensive training
-             from prestigious national and international institutions in arthroscopy and arthroplasty.<br></br>
-              He has held the position of Associate Professor at the Government Medical College in Jamnagar,
-               Gujarat, demonstrating his commitment to medical education and excellence.<br></br>
-                Dr. Agarwal has completed a Joint Replacement Fellowship at Parekh Joint Replacement Hospital in Ahmedabad and further advanced his 
-               expertise with fellowships in Advanced Joint Reconstruction and Revision Surgery at Sunshine Hospital in 
-               Hyderabad, and Advanced Arthroscopy at the Sports Injury Centre, Safdarjung Hospital in New Delhi. <br></br> His specialization 
-               includes Revision Hip and Knee Surgery and Unicondylar Knee Arthroplasty (UKA) with a fellowship from Fortis Hospital in Jaipur.<br></br>
-                Additionally, Dr. Agarwal has expanded his skills internationally through a Foreign Fellowship in Shoulder Arthroscopy and Arthroplasty at 
-                Thammasat University in Southeast Asia. His extensive training and dedication to orthopedic surgery make him a distinguished practitioner in his field.
+            "Dr Agrawal is an Infectious Diseases Physician and faculty for National accredited FNB programme in Infectious Diseases at Hinduja Hospital, Mumbai.
+             After completing his Internal Medicine Residency in India, he secured an International Training Fellowship in Infectious Diseases and General Medicine through the
+              Royal College of Physicians at Addenbrookes hospital, Cambridge, UK.
+              He was awarded the MRCP and the diploma in UK Medical Practice (DipUKMP) during his tenure in the UK. He further completed his training (FNB-Infectious Diseases) from 
+              Hinduja hospital, Mumbai after securing the highest marks in the country.
+             He has secured DTM&H from the Royal College of Physicians, England and has multiple publications to his credit."
             {/* <p>{data?.[0]?.doctor_para_1}</p> */}
           </div>
         </div>

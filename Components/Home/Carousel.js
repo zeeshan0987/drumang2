@@ -4,17 +4,25 @@ import { FaCalendarCheck, FaMobileAlt, FaRegClock } from "react-icons/fa";
 // import './Carousel1.css'; // Import your CSS file here
 
 function Carousel1() {
-  const [data, setData] = useState([]); 
+  const [data, setData] = useState([]);
 
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://cms.maitretech.com/drumang/items/slider?fields=*.*.*"
+        "https://cms.maitretech.com/zebacms/items/slider?fields=*.*.*"
       );
       const jsonData = await response.json();
       console.log("Fetched data:", jsonData);
-      setData(jsonData?.data)
-    
+
+      const sliderImages = jsonData?.data?.[0]?.slider_images;
+      if (sliderImages) {
+        const imageUrls = sliderImages.map(
+          (item) => item.directus_files_id.data.full_url
+        );
+        setData(imageUrls);
+      } else {
+        console.error("Slider images not found in response data.");
+      }
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -31,7 +39,7 @@ function Carousel1() {
           <Carousel.Item key={index} className="carousel_image_new">
             <img
               className="d-block w-100"
-              src={item?.slider_images?.data?.full_url}
+              src={item}
               alt={`Slide ${index + 1}`}
             />
           </Carousel.Item>

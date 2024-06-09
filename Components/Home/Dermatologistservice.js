@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 // import Multicarousel from "../Components/Multicarousel";
 import Multicarousel from "./Multicarousel";
 
@@ -9,6 +8,7 @@ const arr = [
     title: "At our Clinic, we pride ourselves on providing the best care possible to our patients. Orthopedic Care",
     content: "Our Approach At our practice, we are committed to providing compassionate, personalized  care that helps our patients achieve optimal health and wellness.",
     des: "Our orthopedic practice is centered around delivering patient-centered care with a focus on utilizing the latest medical technology and techniques to achieve the best possible outcomes.Our team of highly experienced and dedicated orthopedic surgeons takes a comprehensive approach to diagnosing and treating musculoskeletal conditions, ensuring that ",
+     
   },
   {
     img: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Picture_icon_BLACK.svg",
@@ -29,114 +29,58 @@ const arr = [
 
 const Dermatologistservice = () => {
   return (
-    <DermaMain>
-      <div style={{ backgroundColor: 'aquamarine', width: '100%' }}>
-        <ContentWrapper>
-          {arr.map((item, index) => (
-            item.type === 'paragraph' ? (
-              <ParagraphCard key={index}>
-                <CardTitle>{item.title}</CardTitle>
-                <CardContent>{item.content}</CardContent>
-                <Description>{item.des}</Description>
-              </ParagraphCard>
-            ) : (
-              <ImageCard key={index}>
-                <div>
-                  {/* <img style={{ width: "87px", height: '97px', overflow: 'hidden',marginLeft:'25px' }} src={item.img} alt={item.title} /> */}
-                </div>
-                <ImageCardTitle>{item.title}</ImageCardTitle>
-                <ImageCardDes>{item.des}</ImageCardDes>
-                <ReadMoreButton>
-                  <span>Read more</span>
-                </ReadMoreButton>
-              </ImageCard>
-            )
-          ))}
-        </ContentWrapper>
+    <>
+      <div className="derma-main">
+      <div style={{backgroundColor:'aquamarine',width:'100%'}}>
+    <div  style={{ display: 'flex', flexWrap: 'wrap', gap: '8%', width: "100%", marginLeft:'4%', }}>
+      {arr.map((item, index) => (
+        item.type === 'paragraph' ? (
+          <div  style={{ width: "80%",marginTop:'10px',marginLeft:'10%'}} key={index}>
+            <p style={{fontSize:30, color:'#000000', width:'100%' }}>{item.title}</p>
+            <p style={{fontSize:18}}>{item.content}</p>
+            {/* <p style={{fontSize:2}}>{item.des}</p> */}
+            <p style={{marginLeft:''}}>
+            Our orthopedic practice is centered around delivering patient-centered 
+          care with a focus on utilizing the latest medical technology and techniques to achieve the best possible outcomes.
+        Our team of highly experienced and dedicated orthopedic 
+        surgeons takes a comprehensive approach to diagnosing and treating musculoskeletal conditions, ensuring that 
+        each patient receives a tailored treatment plan that addresses their unique needs and goals. We also place a 
+        strong emphasis on patient education, ensuring that patients understand their conditions and treatment options
+         so they can make informed decisions about their care.
+            </p>
+          </div>
+        ) : (
+          <div style={{ width: "42%", backgroundColor:'#ffffff' ,borderRadius: "10px", alignItems:'center',marginTop:'30px', marginBottom:'20px', }} key={index}>
+            <div>
+              {/* <img style={{ width: "87px", height: '97px', overflow: 'hidden',marginLeft:'25px' }} src={item.img} alt={item.title} /> */}
+            </div>
+            <div style={{ fontSize: 20, marginTop: "20px", marginBottom: "20px",marginLeft:'15px' }}>{item.title}</div>
+            <div style={{marginLeft:'15px'}}>{item.des}</div>
+            <div style={{ width: "80%", height: '47px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#01CAB8', gap: 5, borderRadius: "10px",marginLeft:'25px', marginBottom:'10px' }}>
+              <span>Read more</span>
+          
+            </div>
+          </div>
+        )
+      ))}
+    </div>
+    </div>
+        {/* <div>
+        <h5>At our Clinic, we pride 
+          ourselves on providing the best care possible to our patients.</h5>
+          </div> */}
+          {/* <div>
+        <h6>Our Approach
+        At our practice, we are committed to providing compassionate, personalized 
+        care that helps our patients achieve optimal health and wellness.</h6>
+        </div> */}
+
+{/* 
+        <img src="./images/heading-art-01.svg" /> */}
       </div>
       {/* <Multicarousel /> */}
-    </DermaMain>
+    </>
   );
 };
-
-const DermaMain = styled.div`
-  padding: 0rem;
-  text-align: center;
-  color: #03002f;
-`;
-
-const ContentWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8%;
-  width: 100%;
-  margin-left: 4%;
-`;
-
-const ParagraphCard = styled.div`
-  width: 80%;
-  margin-top: 10px;
-  margin-left: 10%;
-  @media (max-width: 768px) {
-    width: 100%;
-    margin-left: 0;
-  }
-`;
-
-const CardTitle = styled.p`
-  font-size: 25px;
-  color: #000000;
-  width: 90%;
-`;
-
-const CardContent = styled.p`
-  font-size: 15px;
-  width: 90%;
-`;
-
-const Description = styled.p`
-  margin-left: 0;
-  width: 90%;
-`;
-
-const ImageCard = styled.div`
-  width: 42%;
-  background-color: #ffffff;
-  border-radius: 10px;
-  align-items: center;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  padding: 20px;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`;
-
-const ImageCardTitle = styled.div`
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 15px;
-`;
-
-const ImageCardDes = styled.div`
-  margin-left: -5px;
-  
-`;
-
-const ReadMoreButton = styled.div`
-  width: 80%;
-  height: 47px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #01cab8;
-  gap: 5px;
-  border-radius: 10px;
-  margin-left: 25px;
-  margin-bottom: 10px;
-  color: #fff;
-  cursor: pointer;
-`;
 
 export default Dermatologistservice;

@@ -9,7 +9,7 @@ const Results = () => {
   //changes
   
     const NEXT_PUBLIC_URL =
-      process.env.NEXT_PUBLIC_URL || "https://cms.maitretech.com/drumang/items";
+      process.env.NEXT_PUBLIC_URL || "https://cms.maitretech.com/zebacms/items";
     const response = await fetch(`${NEXT_PUBLIC_URL}/results?fields=*.*`);
 
     const responseData = await response.json();
@@ -24,12 +24,8 @@ const Results = () => {
     <>
       <Header />
       <div className="about-header" id="before-after">
-        <h1>Results</h1>
-        <p>Dr. Umang Agarwal</p>
-        <p>Ex- Associate Professor<br></br>
-            M.s.(Ortho),F.I.A.A.S, F.I.S.M.<br></br>
-            Arthroscopy & Arthroplasty Specialist<br></br>
-            Joint Replacement and Spine Specialist</p>
+        <h1>Before and Afters</h1>
+        <p>Dr. Zeba Quadiri</p>
       </div>
       <section className="before-after-main">
         <div className="main">

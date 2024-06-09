@@ -46,7 +46,7 @@ function Header({ cart }) {
       <Container>
         
         <Navbar.Brand href="/" className="logo">
-          <img src="/logo.png" alt="logo" />
+          <img src="/images/nav_logo.png" alt="logo" />
           {/* <em><h1 >Zebdermm</h1></em> */}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -83,13 +83,13 @@ function Header({ cart }) {
                 <Link href="/Results">Photo Gallery</Link>
               </NavDropdown.Item>
               <NavDropdown.Item className="dropdown1">
-                <Link href="/Video">Video Gallery</Link>
+                <Link href="/Results">Video Gallery</Link>
               </NavDropdown.Item>
               <NavDropdown.Item className="dropdown1">
-                <Link href="/Event">News & Events</Link>
+                <Link href="/Results">News & Events</Link>
               </NavDropdown.Item>
               <NavDropdown.Item className="dropdown1">
-                <Link href="/Cases">Interesting Cases</Link>
+                <Link href="/Results">Interesting Cases</Link>
               </NavDropdown.Item>
               </NavDropdown>
             {/* <Link href="/Blogs">BLOGS</Link> */}
