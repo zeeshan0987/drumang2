@@ -1,5 +1,7 @@
 .footer-cart{
-    background-color: black;
+    background-image: url('/images/homecardbackground.png');
+    background-size: cover; /* Adjust the size of the background image */
+    background-attachment: fixed;
 }
 .card-hover:hover {
     transform: translateY(-10px);
@@ -12,6 +14,7 @@
     justify-content: center;
     width: 100%;
     height: auto;
+    gap: 25px;
     
 }
 .hov-cod:hover{
@@ -54,11 +57,61 @@
     justify-items: center;
     gap: 40px;
   }
-  
+  .service-cart{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* background-image: url('/images/homecardbackground.png'); */
+    
+  }
+  .s-cart{
+    width: 312px;
+    height: 490px;
+    background-color:#ffffff;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+  }
+  .Home-card{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  .Home-card1{
+    width: 461px;
+    height: 180px;
+    background-image: url('/images/homecardbackground.png');
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
 
 @media only screen and (max-width: 600px) {
     .Meet-card{
         display: block;
+    }
+    .Home-card{
+        display: block;
+        padding: 10px;
+    }
+    .Home-card1{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .service-cart{
+        display: block;
+        padding: 5px;
     }
     .replacement {
         display: block;

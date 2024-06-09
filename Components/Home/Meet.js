@@ -83,24 +83,26 @@ const Meet = () => {
 const styles = {
   card1: {
     width: "350px",
-    margin:"3%",
+    // margin:"3%",
     // backgroundColor: '#333',
     color: '#333',
     padding: '20px',
     borderRadius: '10px',
     boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+    marginTop:"10px",
   },
   card2: {
     width: "350px",
     backgroundColor: '#ffffff',
     borderRadius: '10px',
     alignItems: 'center',
-    margin:"3%",
+    // margin:"3%",
     overflow:'hidden',
     // padding: '20px',
     boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
     transition: 'transform 0.3s, box-shadow 0.3s',
     // margin:"25px"
+    marginTop:"10px",
   },
   cardTitle1: {
     fontSize: '30px',

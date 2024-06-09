@@ -10,13 +10,13 @@ const Footer = () => {
   return (
     
     <> 
-    <section className="footer-cart">
+      <section className="footer-cart">
         <div style={{
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "space-around",
           alignItems: "center",
-          // backgroundColor: "#04a086",
+          backgroundColor: "#04a086",
         }}>
           <h3>Popular Videos</h3>
         </div>
@@ -35,6 +35,7 @@ const Footer = () => {
         </div>
       </section>
       <section className="footer-main">
+
         <div className="footer-inner">
           <h5>Dr. Umang Aggarwal</h5>
           <p>
