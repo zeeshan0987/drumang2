@@ -23,9 +23,54 @@
 .card-hover{
     width: '42%';
 }
+.replacement {
+    background-image: url('/public/Replacement_background.jpg');
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  .replacement1 {
+    width: 536px;
+    height: 1060px;
+  }
+  
+  .replacement2 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cards3 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 40px;
+  }
+  
 
 @media only screen and (max-width: 600px) {
     .Meet-card{
         display: block;
     }
+    .replacement {
+        display: block;
+      }
+    
+      .replacement1 {
+        height: auto;
+        width: 100%;
+      }
+    
+      .replacement2 {
+        width:100%;
+    }
+    
   }
