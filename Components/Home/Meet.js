@@ -1,6 +1,5 @@
 import React from 'react';
 import { GiKneeCap } from "react-icons/gi";
-import styled from 'styled-components';
 
 const arr = [
   {
@@ -40,106 +39,122 @@ const arr = [
   // Add more items here as needed
 ];
 
+// style={{ display: 'flex', flexWrap: 'wrap', gap: '6%', width: '100%', marginLeft: '5%' }}
 const Meet = () => {
   return (
-    <Container>
-      <CardWrapper>
+    <div style={{ backgroundColor: 'lightgray', padding: '20px' }}>
+      <div className='Meet-card'>
         {arr.map((item, index) => (
           item.type === 'paragraph' ? (
-            <Card key={index} type="paragraph">
-              <CardTitle type="paragraph">{item.title}</CardTitle>
-              <CardContent>{item.content}</CardContent>
-            </Card>
+            <div className="card-hover" style={styles.card1} key={index}>
+              <p style={styles.cardTitle1}>{item.title}</p>
+              <p style={styles.cardContent}>{item.content}</p>
+            </div>
           ) : (
-            <Card className="card-hover" key={index}>
-              <Icon>{item.icon}</Icon>
-              <CardTitle>{item.title}</CardTitle>
-              <CardDes>{item.des}</CardDes>
-              <LearnMoreButton>
+            <div className="card-hover" style={styles.card2} key={index}>
+              <div className='hov-cod '>
+              <div style={{fontSize:75 }}>
+              {item.icon}
+                {/* <img style={styles.cardImg} src={item.img} alt={item.title} /> */}
+              </div>
+              <div style={styles.cardTitle2}>{item.title}</div>
+              <div style={styles.cardDes}>{item.des}</div>
+              <div style={styles.learnMoreButton}>
                 <span>Learn more</span>
-              </LearnMoreButton>
-            </Card>
+              </div>
+              </div>
+            </div>
           )
         ))}
-      </CardWrapper>
-    </Container>
+      </div>
+
+      <style>
+        {`
+          .card-hover:hover .cardTitle2,
+          .card-hover:hover .cardDes {
+            color: #000000;
+          }
+        `}
+      </style>
+    </div>
   );
 }
 
-const Container = styled.div`
-  background-color: lightgray;
-  padding: 20px;
-`;
-
-const CardWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6%;
-  width: 100%;
-  margin-left: 5%;
-`;
-
-const CardTitle = styled.p`
-  font-size: ${props => props.type === 'paragraph' ? '30px' : '20px'};
-  margin-bottom: 10px;
-`;
-
-const CardContent = styled.p`
-  font-size: 20px;
-`;
-
-const Icon = styled.div`
-  font-size: 75px;
-`;
-
-const CardDes = styled.div`
-  font-size: 16px;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-left: 2%;
-`;
-
-const LearnMoreButton = styled.div`
-  width: 80%;
-  height: 47px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #01CAB8;
-  gap: 5px;
-  border-radius: 10px;
-  margin-left: 25px;
-  margin-bottom: 10px;
-  color: #fff;
-  cursor: pointer;
-`;
-
-const Card = styled.div`
-  width: ${props => props.type === 'paragraph' ? '40%' : '42%'};
-  background-color: ${props => props.type === 'paragraph' ? '#333' : '#ffffff'};
-  color: ${props => props.type === 'paragraph' ? '#fff' : '#333'};
-  margin-top: 10px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background-color: ${props => props.type === 'paragraph' ? '#333' : '#174646f1'};
+const styles = {
+  card1: {
+    width: "350px",
+    margin:"3%",
+    // backgroundColor: '#333',
+    color: '#333',
+    padding: '20px',
+    borderRadius: '10px',
+    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+  },
+  card2: {
+    width: "350px",
+    backgroundColor: '#ffffff',
+    borderRadius: '10px',
+    alignItems: 'center',
+    margin:"3%",
+    overflow:'hidden',
+    // padding: '20px',
+    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+    transition: 'transform 0.3s, box-shadow 0.3s',
+    // margin:"25px"
+  },
+  cardTitle1: {
+    fontSize: '30px',
+    marginBottom: '10px',
+  },
+  cardTitle2: {
+    fontSize: '20px',
+    marginTop: '2%',
+    marginBottom: '2%',
+    marginLeft: '2%',
+  },
+  cardContent: {
+    fontSize: '20px',
+  },
+  cardImg: {
+    width: '19%',
+    height: 'auto',
+    overflow: 'hidden',
+    marginLeft: '25px',
+  },
+  cardDes: {
+    fontSize: '16px',
+    marginLeft: '25px',
+  },
+  learnMoreButton: {
+    width: '80%',
+    height: '47px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#01CAB8',
+    gap: '5px',
+    borderRadius: '10px',
+    marginLeft: '25px',
+    marginBottom: '10px',
+    color: '#fff',
+    cursor: 'pointer',
+  },
+  '@media (maxWidth: 320px)': {
+    card1: {
+      width: '100%',
+    },
+    card2: {
+      width: '100%',
+    }
+  },
+  '@media (maxWidth: 768px)': {
+    card1: {
+      width: '100%',
+    },
+    card2: {
+      width: '100%',
+    }
   }
-
-  &:hover ${CardTitle}, &:hover ${CardDes} {
-    color: ${props => props.type === 'paragraph' ? '#fff' : '#000000'};
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`;
+};
 
 export default Meet;
