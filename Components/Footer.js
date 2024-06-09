@@ -10,10 +10,7 @@ const Footer = () => {
   return (
     
     <> 
-    <section style={{
-      backgroundColor: "#04a086",
-      color: "white"
-    }}>
+    <section className="footer-cart">
         <div style={{
           display: "flex",
           flexWrap: "wrap",
