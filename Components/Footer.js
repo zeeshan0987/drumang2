@@ -18,8 +18,6 @@ const Footer = () => {
        className="w-full h-auto items-center justify-center bg-[#174646f1]"
       >
         <div className="w-full flex items-center justify-center">
-
-        
         <div className="w-full md:w-[70%] h-auto md:flex items-center justify-center p-4 m-3 rounded-md" style={{ backgroundImage: "url('https://www.drkheras.com/assets/images/home/news_latter_img.jpg')" }}>
         <div>
           <h3>Popular Videos</h3>
