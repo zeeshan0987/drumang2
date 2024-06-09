@@ -9,9 +9,6 @@ const Homecard = () => {
       <section className="home-card-main">
       <Link href="/Contactus"className="btn-grad1"  >
         <div className="home-card-inner">
-          
-          
-
           <h4> Robotic Joint Replacement Surgeries. </h4>
           <div className="icon-div">
             <FaCalendarCheck />

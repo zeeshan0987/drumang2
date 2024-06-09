@@ -39,18 +39,20 @@ const arr = [
   // Add more items here as needed
 ];
 
+// style={{ display: 'flex', flexWrap: 'wrap', gap: '6%', width: '100%', marginLeft: '5%' }}
 const Meet = () => {
   return (
     <div style={{ backgroundColor: 'lightgray', padding: '20px' }}>
-      <div className='sm:block' style={{ display: 'flex', flexWrap: 'wrap', gap: '6%', width: '100%', marginLeft: '5%' }}>
+      <div className='block md:flex flex-wrap gap-4 items-center justify-center w-full'>
         {arr.map((item, index) => (
           item.type === 'paragraph' ? (
-            <div style={styles.card1} key={index}>
+            <div className='w-full md:w-[42%] ' style={styles.card1} key={index}>
               <p style={styles.cardTitle1}>{item.title}</p>
               <p style={styles.cardContent}>{item.content}</p>
             </div>
           ) : (
-            <div className="card-hover" style={styles.card2} key={index}>
+            <div className="card-hover w-full md:w-[42%]" style={styles.card2} key={index}>
+              <div className='hover:bg-[#174646f1] w-full h-full p-4 hover:text-white'>
               <div style={{fontSize:75 }}>
               {item.icon}
                 {/* <img style={styles.cardImg} src={item.img} alt={item.title} /> */}
@@ -59,6 +61,7 @@ const Meet = () => {
               <div style={styles.cardDes}>{item.des}</div>
               <div style={styles.learnMoreButton}>
                 <span>Learn more</span>
+              </div>
               </div>
             </div>
           )
@@ -70,18 +73,12 @@ const Meet = () => {
           .card-hover:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            background-color: #174646f1;
+            
           }
 
           .card-hover:hover .cardTitle2,
           .card-hover:hover .cardDes {
             color: #000000;
-          }
-
-          @media screen and (max-width: 768px) {
-            .card1, .card2 {
-              width: 100%;
-            }
           }
         `}
       </style>
@@ -91,7 +88,7 @@ const Meet = () => {
 
 const styles = {
   card1: {
-    width: '40%',
+    // width: '40%',
     marginTop: '10px',
     // backgroundColor: '#333',
     color: '#333',
@@ -100,13 +97,14 @@ const styles = {
     boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
   },
   card2: {
-    width: '42%',
+    // width: '42%',
     backgroundColor: '#ffffff',
     borderRadius: '10px',
     alignItems: 'center',
     marginTop: '3%',
     marginBottom: '2%',
-    padding: '20px',
+    overflow:'hidden',
+    // padding: '20px',
     boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
     transition: 'transform 0.3s, box-shadow 0.3s',
   },
