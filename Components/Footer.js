@@ -1,10 +1,5 @@
-import React from "react";
-import Link from "next/link";
-import {
-  RiFacebookFill,
-  RiInstagramFill,
-  RiWhatsappFill,
-} from "react-icons/ri";
+import React from "react"
+import Link from "next/link"
 import { FaPhone } from "react-icons/fa6";
 import { IoMailSharp } from "react-icons/io5";
 import { FaMapLocationDot } from "react-icons/fa6";
@@ -13,85 +8,54 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
-    <>
-      <section
-       className="w-full h-auto items-center justify-center bg-[#174646f1]"
-      >
-        <div className="">
-        <div className="footer-card" style={{ backgroundImage: "url('https://www.drkheras.com/assets/images/home/news_latter_img.jpg')" }}>
-        <div>
-          <h3 className="footer-title">Popular Videos</h3>
+    
+    <> 
+    <section style={{
+      backgroundColor: "#04a086",
+      color: "white"
+    }}>
+        <div style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-around",
+          alignItems: "center",
+          // backgroundColor: "#04a086",
+        }}>
+          <h3>Popular Videos</h3>
         </div>
-        <div className="flex gap-2 flex-col md:flex-row items-center justify-center">
-          <iframe
-            width="231"
-            height="140"
-            src="https://www.youtube.com/embed/CKRs9wxNvA0?si=KS0b9R2ZCnVsaDdI"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            width="231"
-            height="140"
-            src="https://www.youtube.com/embed/CKRs9wxNvA0?si=KS0b9R2ZCnVsaDdI"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            width="231"
-            height="140"
-            src="https://www.youtube.com/embed/CKRs9wxNvA0?si=KS0b9R2ZCnVsaDdI"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            width="231"
-            height="140"
-            src="https://www.youtube.com/embed/CKRs9wxNvA0?si=KS0b9R2ZCnVsaDdI"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-        </div>
+        <div style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-around",
+          alignItems: "center",
+          // backgroundColor: "#04a086",
+        }}>
+          <iframe width="240" height="200" src="https://www.youtube.com/embed/CKRs9wxNvA0?si=KS0b9R2ZCnVsaDdI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="240" height="200" src="https://www.youtube.com/embed/CKRs9wxNvA0?si=KS0b9R2ZCnVsaDdI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="240" height="200" src="https://www.youtube.com/embed/CKRs9wxNvA0?si=KS0b9R2ZCnVsaDdI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="240" height="200" src="https://www.youtube.com/embed/CKRs9wxNvA0?si=KS0b9R2ZCnVsaDdI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          
         </div>
       </section>
       <section className="footer-main">
         <div className="footer-inner">
           <h5>Dr. Umang Aggarwal</h5>
-          <p>Dr. Umang Aggarwal is a renowned and highly acclaimed doctor.</p>
+          <p>
+            Dr. Umang Aggarwal is a renowned and highly acclaimed  doctor.
+          </p>
           <h6>Connect</h6>
           <p>
-            <FaPhone />
-            --+91-123456789<br></br>
-            <IoMailSharp />
-            --deumang@gmail<br></br>
-            <FaMapLocationDot />- ea-82 indrapuri bhopal -221009
+          <FaPhone />--+91-123456789<br></br>
+           <IoMailSharp />--deumang@gmail<br></br> 
+           <FaMapLocationDot />-    ea-82 indrapuri bhopal -221009
           </p>
-          <p
-            style={{
-              fontSize: 30,
-              justifyContent: "space-between",
-              padding: "10px",
-            }}
-          >
+          <p style={{fontSize:30, justifyContent:"space-between",padding:'10px', }}>
             <FaWhatsappSquare />
-            <FaFacebookSquare />
-            <FaYoutube />
-          </p>
-
-          {/* <button className="btn-grad"><Link href="/Contactus">Book an Appointment</Link></button> */}
+          <FaFacebookSquare />
+          <FaYoutube />
+           </p>
+          
+          
         </div>
         <div className="footer-inner">
           <h5>Useful Links</h5>
@@ -99,76 +63,24 @@ const Footer = () => {
           <Link href="/Aboutdr">About Doctor</Link>
           <Link href="/Gallery">Gallery</Link>
           <Link href="/Results">Results</Link>
-          {/* <div>
-            <Link href="https://www.facebook.com/dr.zebaquadir?mibextid=ZbWKwL" target="_blank"><img src="/images/Facebook_icon.png" height="50px" width="50px" style={{ marginLeft: "1rem" }} /></Link>
-
-
-
-            <Link href="https://instagram.com/zebdermm?igshid=ZDdkNTZiNTM=" target="_blank"><img src="/images/Instagram.png" height="50px" width="55px" style={{ marginLeft: "1rem" }} /></Link>
-
-
-
-            <Link href="https://wa.me/c/917317618333" target="_blank"><img src="/images/whatsapp_Icon.png" height="50px" width="50px" style={{ marginLeft: "1rem" }} /></Link>
-          </div> */}
-          {/* <li style={{ height: "3rem", width: "3rem", marginTop: "0rem", alignItems: "center" }}>
-            <a href="https://www.facebook.com/dr.zebaquadir?mibextid=ZbWKwL" target="_blank">
-              <RiFacebookFill
-                style={{
-                  fontSize: "2rem",
-                  width: "3rem",
-                  height: "3rem",
-                  padding: "0px",
-                  margin: "10px",
-                  color: "white"
-                }}
-              />
-            </a>
-            <a href="https://instagram.com/zebdermm?igshid=ZDdkNTZiNTM=" target="_blank">
-              <RiInstagramFill
-                style={{
-                  fontSize: "2rem",
-                  width: "3rem",
-                  height: "3rem",
-                  padding: "0px",
-                  margin: "10px",
-                  color: "white"
-                }}
-              />
-            </a>
-            <a href="https://wa.me/c/917317618333" target="_blank">
-              <RiWhatsappFill
-                style={{
-                  fontSize: "2rem",
-                  width: "3rem",
-                  height: "3rem",
-                  padding: "0px",
-                  margin: "10px",
-                  color: "white"
-                }}
-              />
-            </a>
-            
-          </li> */}
         </div>
         <div className="footer-inner">
           <h5>Orthopaedic</h5>
           <Link href="/Treatments">Spine</Link>
-          <Link href="/Treatments">Arthroscopy</Link>
+          <Link href="/Treatments">
+            Arthroscopy
+          </Link>
           <Link href="/Treatments">Joint Replacement</Link>
-          <Link href="/Treatments">Laser Hair Reduction</Link>
-          <Link href="/Treatments">Tattoo Removal</Link>
-          <Link href="/Treatments">Hydra Facial</Link>
-          <Link href="/Treatments">BB Glow Treatment </Link>
+          <Link href="/Treatments">Dermatomyositis</Link>
+          <Link href="/Treatments">Gouty Arthritis</Link>
+          <Link href="/Treatments">Arthritis</Link>
+          <Link href="/Treatments">Functional Orthopedics </Link>
 
-          {/* <Link href="/Treatments">Radio Cautery - mole /wart/freckles removal</Link> */}
         </div>
+        
       </section>
     </>
-  );
-};
+  )
+}
 
-const Styles = {
-  replacement: {
-    backgroundImage: "url('/public/images/background_services2.jpg')",
-  },}
-export default Footer;
+export default Footer

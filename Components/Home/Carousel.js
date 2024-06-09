@@ -4,12 +4,12 @@ import { FaCalendarCheck, FaMobileAlt, FaRegClock } from "react-icons/fa";
 // import './Carousel1.css'; // Import your CSS file here
 
 function Carousel1() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([]); 
 
   const fetchData = async () => {
     try {
       const response = await fetch(
-       "https://cms.maitretech.com/drumang/items/slider?fields=*.*.*"
+        "https://cms.maitretech.com/drumang/items/slider?fields=*.*.*"
       );
       const jsonData = await response.json();
       console.log("Fetched data:", jsonData);
@@ -26,21 +26,21 @@ function Carousel1() {
 
   return (
     <Carousel fade>
-    {data.length > 0 ? (
-      data.map((item, index) => (
-        <Carousel.Item key={index} className="carousel_image_new">
-          <img
-            className="d-block w-100"
-            src={item?.slider_images?.data?.full_url}
-            alt={`Slide ${index + 1}`}
-          />
-        </Carousel.Item>
-      ))
-    ) : (
-      <p>Loading...</p> // Display a loading message or spinner while data is being fetched
-    )}
-  </Carousel>
-);
+      {data.length > 0 ? (
+        data.map((item, index) => (
+          <Carousel.Item key={index} className="carousel_image_new">
+            <img
+              className="d-block w-100"
+              src={item?.slider_images?.data?.full_url}
+              alt={`Slide ${index + 1}`}
+            />
+          </Carousel.Item>
+        ))
+      ) : (
+        <p>Loading...</p> // Display a loading message or spinner while data is being fetched
+      )}
+    </Carousel>
+  );
 }
 
 export default Carousel1;

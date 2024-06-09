@@ -8,15 +8,19 @@ import Testimonial from "../Components/Home/Testimonial";
 const About = () => {
   return (
     <>
+     
       <section className="about-main">
         <Header />
         <div className="about-header">
-          <h1>About Clinic</h1>
-          <p>Dr. Zeba Quadiri / About Clinic</p>
+          <h1>OPD Timing</h1>
+          <p>Dr. Umang Agarwal <br></br>
+          <p>Ex- Associate Professor<br></br>M.s.(Ortho),F.I.A.A.S, F.I.S.M.<br></br>
+              Arthroscopy & Arthroplasty Specialist<br></br>
+            Joint Replacement and Spine Specialist</p></p>
         </div>
         <Weoffer />
         <Clinictiming />
-        <Testimonial />
+        {/* <Testimonial /> */}
         <Footer />
       </section>
     </>

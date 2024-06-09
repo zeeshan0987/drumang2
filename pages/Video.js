@@ -4,7 +4,7 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import styled from "styled-components";
 
-const YoutubeEmbed = () => {
+const Video = () => {
   return (
     <>
       <Header />
@@ -23,8 +23,8 @@ const YoutubeEmbed = () => {
         <h1>Vlogs</h1>
         <VlogContainer>
           <iframe
-            width="240"
-            height="200"
+            width="400"
+            height="400"
             src="https://www.youtube.com/embed/CKRs9wxNvA0?si=KS0b9R2ZCnVsaDdI"
             title="YouTube video player"
             frameBorder="0"
@@ -33,8 +33,8 @@ const YoutubeEmbed = () => {
             allowFullScreen
           ></iframe>
           <iframe
-            width="240"
-            height="200"
+            width="400"
+            height="400"
             src="https://www.youtube.com/embed/CKRs9wxNvA0?si=KS0b9R2ZCnVsaDdI"
             title="YouTube video player"
             frameBorder="0"
@@ -43,8 +43,8 @@ const YoutubeEmbed = () => {
             allowFullScreen
           ></iframe>
           <iframe
-            width="240"
-            height="200"
+            width="400"
+            height="400"
             src="https://www.youtube.com/embed/CKRs9wxNvA0?si=KS0b9R2ZCnVsaDdI"
             title="YouTube video player"
             frameBorder="0"
@@ -53,8 +53,8 @@ const YoutubeEmbed = () => {
             allowFullScreen
           ></iframe>
           <iframe
-            width="240"
-            height="200"
+            width="400"
+            height="400"
             src="https://www.youtube.com/embed/CKRs9wxNvA0?si=KS0b9R2ZCnVsaDdI"
             title="YouTube video player"
             frameBorder="0"
@@ -70,8 +70,12 @@ const YoutubeEmbed = () => {
 };
 
 const AboutHeader = styled.div`
-  text-align: center;
+  text-align: start;
+  background-image: url("/images/hero_about.jpg");
   padding: 20px;
+  background-size: cover;
+  background-position: center;
+  
   background-color: #f5f5f5;
 
   h1 {
@@ -95,11 +99,17 @@ const VlogsSection = styled.div`
 const VlogContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
   justify-content: center;
 
   iframe {
     max-width: 100%;
+    width: 400px;
+    height: 400px;
+    @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
+    }
   }
 `;
 
@@ -107,4 +117,4 @@ const AboutDoctor = styled.div`
   /* Add styles for AboutDoctor if needed */
 `;
 
-export default YoutubeEmbed;
+export default Video;

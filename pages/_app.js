@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import "../styles/footer.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
 import { AppProvider } from "../Components/Context";

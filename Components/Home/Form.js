@@ -23,7 +23,7 @@ const Form = () => {
     if (data.number === "") {
       setError("Enter the number");
     } else {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/appointments?fi elds=*.*`, {
+      const response = await fetch(`https://cms.maitretech.com/drumang/items/form?fields=*.*`, {
         method: "POST",
         body: JSON.stringify({
           name:data.name,

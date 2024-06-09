@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 
-const Results = () => {
+const Cases = () => {
   const [data, setData] = useState();
 
   const getDirectorData = async () => {
@@ -10,7 +10,7 @@ const Results = () => {
   
     const NEXT_PUBLIC_URL =
       process.env.NEXT_PUBLIC_URL || "https://cms.maitretech.com/drumang/items";
-    const response = await fetch(`${NEXT_PUBLIC_URL}/results?fields=*.*`);
+    const response = await fetch(`${NEXT_PUBLIC_URL}/cases?fields=*.*`);
 
     const responseData = await response.json();
     setData(responseData.data);
@@ -38,8 +38,9 @@ const Results = () => {
               <li className="cards_item-1" key={item.id}>
                 <div className="card_new-1">
                   <div className="card_image">
-                    <img src={item.result_image?.data?.full_url} alt={item.result_name} />
-                    <h6>{item.result_name}</h6>
+                    <img src={item.case_image?.data?.full_url} alt={item.case_name} />
+                    <h6>{item.case_name}</h6>
+                    <p>{item.case_detail}</p>
                   </div>
                 </div>
               </li>
@@ -52,4 +53,4 @@ const Results = () => {
   );
 };
 
-export default Results;
+export default Cases;
